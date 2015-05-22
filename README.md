@@ -284,6 +284,7 @@ This plugin was enhanced for Plugman / PhoneGap Build by [Eddy Verbruggen](http:
 * Credits for the original iOS code go to [Felix Montanez](https://github.com/felixactv8/Phonegap-Calendar-Plugin-ios).
 * Credits for the original Android code go to [Ten Forward Consulting](https://github.com/tenforwardconsulting/Phonegap-Calendar-Plugin-android) and [twistandshout](https://github.com/twistandshout/phonegap-calendar-plugin).
 * Special thanks to [four32c.com](http://four32c.com) for sponsoring part of the implementation, while keeping the plugin opensource.
+* Windows Phone 8 support was added by Github/StarGate01
 
 ## 5. License
 
