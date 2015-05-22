@@ -105,6 +105,29 @@ Then create a package called `accessor` and copy other 3 java Classes into it.
 Note that if you don't want your app to ask for these permissions, you can leave them out, but you'll only be able to
 use one function of this plugin: `createEventInteractively`.
 
+#### Windows Phone 8
+
+1\. Add the following xml to your `config.xml`:
+```xml
+<!-- for wp8 -->
+<feature name="Calendar">
+  <param name="wp-package" value="Calendar"/>
+</feature>
+```
+
+2\. Grab a copy of Calendar.js, add it to your project and reference it in `index.html`:
+```html
+<script type="text/javascript" src="js/Calendar.js"></script>
+```
+
+3\. Download the source files for Windows Phone 8 and copy them to your project.
+
+Windows Phone 8: Copy `Calendar.cs` to `platforms/android/src/wp` (create the folders/packages).
+
+4\. Add this capability to your Properties/WMAppManifest.xml:
+```xml
+<Capability Name="ID_CAP_APPOINTMENTS" />
+```
 
 ### PhoneGap Build
 
@@ -122,24 +145,24 @@ or to use a specific version:
 
 The table gives an overview of basic operation compatibility:
 
-Operation                           | Comment     | iOS | Android
------------------------------------ | ----------- | --- | -------
-createCalendar                      |             | yes | 
-deleteCalendar                      |             | yes | 
-createEvent                         | silent      | yes | yes (on Android < 4 dialog is shown)
-createEventWithOptions              | silent      | yes | yes (on Android < 4 dialog is shown)
-createEventInteractively            | interactive | yes | yes
-createEventInteractivelyWithOptions | interactive | yes | yes
-findEvent                           |             | yes | yes
-findEventWithOptions                |             | yes | yes
-listEventsInRange                   |             |     | yes
-listCalendars                       |             | yes | yes
-findAllEventsInNamedCalendars       |             | yes | 
-modifyEvent                         |             | yes | 
-modifyEventWithOptions              |             | yes | 
-deleteEvent                         |             | yes | yes
-deleteEventFromNamedCalendar        |             | yes | 
-openCalendar                        |             | yes | yes
+Operation                           | Comment     | iOS | WP8 | Android
+----------------------------------- | ----------- | --- | --- | -------
+createCalendar                      |             | yes | ??? | 
+deleteCalendar                      |             | yes | ??? |  
+createEvent                         | silent      | yes | ??? | yes (on Android < 4 dialog is shown)
+createEventWithOptions              | silent      | yes | ??? | yes (on Android < 4 dialog is shown)
+createEventInteractively            | interactive | yes | ??? | yes
+createEventInteractivelyWithOptions | interactive | yes | ??? | yes
+findEvent                           |             | yes | ??? | yes
+findEventWithOptions                |             | yes | ??? | yes
+listEventsInRange                   |             |     | ??? | yes
+listCalendars                       |             | yes | ??? | yes
+findAllEventsInNamedCalendars       |             | yes | ??? | 
+modifyEvent                         |             | yes | ??? | 
+modifyEventWithOptions              |             | yes | ??? | 
+deleteEvent                         |             | yes | ??? | yes
+deleteEventFromNamedCalendar        |             | yes | ??? | 
+openCalendar                        |             | yes | ??? | yes
 
 Basic operations, you'll want to copy-paste this for testing purposes:
 
