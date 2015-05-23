@@ -36,6 +36,10 @@ This plugin allows you to add events to the Calendar of the mobile device.
 * Supported methods on Android 4: `find`, `create` (silent and interactive), `delete`, ..
 * Supported methods on Android 2 and 3: `create` interactive only: the user is presented a prefilled Calendar event. Pressing the hardware back button will give control back to your app.
 
+### Windows Phone 8 specifics
+* Supported methods: `find`, `create` (only intercative)
+* Only beta support
+
 ## 2. Installation
 
 ### Automatically (CLI / Plugman)
@@ -145,24 +149,24 @@ or to use a specific version:
 
 The table gives an overview of basic operation compatibility:
 
-Operation                           | Comment     | iOS | WP8 | Android
------------------------------------ | ----------- | --- | --- | -------
-createCalendar                      |             | yes | ??? | 
-deleteCalendar                      |             | yes | ??? |  
-createEvent                         | silent      | yes | ??? | yes (on Android < 4 dialog is shown)
-createEventWithOptions              | silent      | yes | ??? | yes (on Android < 4 dialog is shown)
-createEventInteractively            | interactive | yes | ??? | yes
-createEventInteractivelyWithOptions | interactive | yes | ??? | yes
-findEvent                           |             | yes | ??? | yes
-findEventWithOptions                |             | yes | ??? | yes
-listEventsInRange                   |             |     | ??? | yes
-listCalendars                       |             | yes | ??? | yes
-findAllEventsInNamedCalendars       |             | yes | ??? | 
-modifyEvent                         |             | yes | ??? | 
-modifyEventWithOptions              |             | yes | ??? | 
-deleteEvent                         |             | yes | ??? | yes
-deleteEventFromNamedCalendar        |             | yes | ??? | 
-openCalendar                        |             | yes | ??? | yes
+Operation                           | Comment     | iOS | Windows Phone 8       | Android
+----------------------------------- | ----------- | --- | --------------------- | -------
+createCalendar                      |             | yes |                       | 
+deleteCalendar                      |             | yes |                       |  
+createEvent                         | silent      | yes | yes (dialog is shown) | yes (on Android < 4 dialog is shown)
+createEventWithOptions              | silent      | yes | yes (dialog is shown) | yes (on Android < 4 dialog is shown)
+createEventInteractively            | interactive | yes | yes                   | yes
+createEventInteractivelyWithOptions | interactive | yes | yes                   | yes
+findEvent                           |             | yes |                       | yes
+findEventWithOptions                |             | yes |                       | yes
+listEventsInRange                   |             |     |                       | yes
+listCalendars                       |             | yes |                       | yes
+findAllEventsInNamedCalendars       |             | yes |                       | 
+modifyEvent                         |             | yes |                       | 
+modifyEventWithOptions              |             | yes |                       | 
+deleteEvent                         |             | yes |                       | yes
+deleteEventFromNamedCalendar        |             | yes |                       | 
+openCalendar                        |             | yes |                       | yes
 
 Basic operations, you'll want to copy-paste this for testing purposes:
 
